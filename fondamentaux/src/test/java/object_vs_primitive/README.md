@@ -29,3 +29,7 @@ Les primitfs, dans le cas classique où ils sont utilisés dans une méthode, so
 ## Conversion automatique des primitfs <=> Object
 La JVM transforme automatiquement lorsque nécessaire les types primitfs <=> les types Objects (Autoboxing)
 Attention, certain pitfall sont à connaitre.
+
+## Identification de l'adresse mémoire
+Contrairement à d'autres langages, Java ne vous permet pas de connaitre quelle est l'adresse mémoire physique. 
+On peut uniquement savoir si 2 références d'object pointent au même endroit grace à l'opérateur '=='
