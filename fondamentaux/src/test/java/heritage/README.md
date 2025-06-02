@@ -10,7 +10,8 @@ Les notions abordés ici :
 - hiding static méthodes & static membres
 
 ## Référence
-[baeldung](https://www.baeldung.com/java-inheritance)
+- [inheritance](https://www.baeldung.com/java-inheritance)
+- [plus sur 'hiding'](https://www.baeldung.com/java-variable-method-hiding)
 
 ## Définitions
 - **Type covariant** : se rapportent aux types de retour des méthodes des sous-classes. Dans une relation covariante, le type de retour d'une méthode d'une sous-classe peut être un sous-type du type de retour de la même méthode de la super-classe.
