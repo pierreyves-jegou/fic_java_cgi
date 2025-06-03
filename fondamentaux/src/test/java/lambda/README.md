@@ -34,3 +34,36 @@ list.forEach(Consumer<? super T> action)
 
 ## Lambda expression
 Le contrat d'interface étant défini par la @FonctionalInterface, nous allons voir la syntax permettant d'écrire la lambda associé.
+
+En prenant l'exemple de l'expression lambda suivante : 
+```text 
+(s1, s2) -> { 
+    var total = s1 + s2;
+    return total % 2;
+} 
+```
+- La syntaxe d'une expression lambda est composée de trois parties :
+  - un ensemble de paramètres, d'aucun à plusieurs
+  - l'opérateur ->
+  - le corps de la fonction
+
+### Les paramètres
+- Lorsque plusieurs paramètres sont fournis ils doivent être entourés par des paraenthèses comme dans l'exemple
+- Si un seul paramètre est fourni on peut ommetre les paranthèses (ex : s -> s + 10)
+- La plupart du temps, le type des paramètres est inférés par la compilateur. Dans le cas où 1 des paramètres n'est pas inféré, il faut alors spécifier chacun des types des paramètres
+  - (String s, t) -> KO
+  - (String s, Integer t) -> OK
+- Lorsque zéro paramètre en en entrée, on utilise la syntaxe suivante () -> ...
+- Des annotations peuvent précédent le(s) paramètre(s). Dans ce cas, obligation d'utiliser les parenthèses et de préciser le type
+  - Ex : 
+  ```text
+  (@NonNull String s, @NonNull String s2) -> 
+  ```
+
+### Le corps de la fonction
+- Si une seule instruction, il n'est pas nécessaire d'entourer avec les accolades et de préciser le return
+  - ex : s -> s.toString()
+- Sinon accolade plus mot clef "return"
+
+### Pour aller plus loin
+Voir la slide de certification [CGI_FIC_Java_study_guide_lambdas.pptx](../../resources/CGI_FIC_Java_study_guide_lambdas.pptx)
